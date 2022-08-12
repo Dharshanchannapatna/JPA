@@ -28,7 +28,8 @@ public class PubRunner {
 		// System.out.println(u);
 
 		// dao.UpdateNameAndLocationById("Siri", "Ramanagara", 1);
-		dao.deleteById(1);
+		//dao.deleteById(1);
+		dao.deleteById(2);
 	}
 
 }
