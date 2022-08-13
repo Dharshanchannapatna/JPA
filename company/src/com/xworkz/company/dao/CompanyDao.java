@@ -8,4 +8,5 @@ public interface CompanyDao {
 	void updateNameAndCreatedBYBYId(String name,String createdBy,Integer id);
 	void deleteById(Integer id);
 	
+	
 }
