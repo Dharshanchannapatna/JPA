@@ -26,7 +26,7 @@ public class HospitalRunner {
 		// System.out.println(saved);
 		// HospitalEntity t=dao.findById(2);
 		// System.out.println(t);
-		//dao.updateNameAndCreatedBYBYId("Portis", "Sm Krishna", 1);
+		// dao.updateNameAndCreatedBYBYId("Portis", "Sm Krishna", 1);
 		dao.deleteById(1);
 	}
 
