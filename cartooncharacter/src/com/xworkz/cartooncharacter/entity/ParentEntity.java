@@ -6,9 +6,10 @@ import javax.persistence.MappedSuperclass;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
-
+@ToString
 @NoArgsConstructor
 @MappedSuperclass
 

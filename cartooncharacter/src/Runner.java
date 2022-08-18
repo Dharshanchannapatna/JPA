@@ -58,7 +58,15 @@ public class Runner {
 		// dao.deleteByName("Raju");
 //		Long co = dao.total();
 //		System.out.println(co);
-		CartoonCharacterEntity v = dao.findByMaxCreatedDate();
-		System.out.println(v);
+//		CartoonCharacterEntity v = dao.findByMaxCreatedDate();
+//		System.out.println(v);
+//		dao.findAll().forEach(System.out::println);
+//		dao.findAllByAuthor("Nandan").forEach(System.out::println);
+//		dao.findAllByAuthorAndGender("Nandan", "female").forEach(System.out::println);
+//		dao.findAllCountry().forEach(System.out::println);
+//		dao.findAllName().forEach(System.out::println);
+//		dao.findAllNameAndCountry().forEach(obj->System.out.println(obj[0]+"::"+obj[1]));
+		dao.findAllNameAndCountryAndAuthor().forEach(obj -> System.out.println(obj[0] + "::" + obj[1] + "::" + obj[2]));
+
 	}
 }

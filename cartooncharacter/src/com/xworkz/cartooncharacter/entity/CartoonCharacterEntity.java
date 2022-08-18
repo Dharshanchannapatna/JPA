@@ -15,7 +15,9 @@ import org.hibernate.annotations.GenericGenerator;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString(callSuper = true)
 @Data
 @Entity
 @NoArgsConstructor
@@ -30,7 +32,14 @@ import lombok.NoArgsConstructor;
 		@NamedQuery(name = "updateTypeByName", query = "UPDATE CartoonCharacterEntity cc set cc.type=:ty where  cc.name=:nm"),
 		@NamedQuery(name = "deleteByName", query = "DELETE CartoonCharacterEntity cc where cc.name=:nm"),
 		@NamedQuery(name = "total", query = "SELECT  count(*) from CartoonCharacterEntity cc "),
-		@NamedQuery(name = "findByMaxCreatedDate", query = "SELECT MAX(createdDate) from CartoonCharacterEntity") })
+		@NamedQuery(name = "findByMaxCreatedDate", query = "SELECT MAX(createdDate) from CartoonCharacterEntity"),
+		@NamedQuery(name = "findAll", query = "select cc from CartoonCharacterEntity cc"),
+		@NamedQuery(name = "findAllByAuthor", query = "select cc from CartoonCharacterEntity cc where cc.author=:au"),
+		@NamedQuery(name = "findAllByAuthorAndGender", query = "select cc from CartoonCharacterEntity cc where cc.author=:au and cc.gender=:ge "),
+		@NamedQuery(name = "findAllCountry", query = "select cc.country from  CartoonCharacterEntity cc"),
+		@NamedQuery(name = "findAllNameAndCountry", query = "select cc.name,cc.country from CartoonCharacterEntity cc"),
+		@NamedQuery(name = "findAllName", query = "select cc.name from  CartoonCharacterEntity cc"),
+		@NamedQuery(name = "findAllNameAndCountryAndAuthor", query = "select cc.name,cc.country,cc.author from CartoonCharacterEntity cc") })
 
 public class CartoonCharacterEntity extends ParentEntity {
 	@Id
